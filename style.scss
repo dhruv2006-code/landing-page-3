@@ -13,6 +13,10 @@
     font-family: head;
     src: url(./NeueMachina-Regular.otf);
 }
+@font-face {
+    font-family: pixel;
+    src: url(./MatrixtypeDisplayBold-6R4e6.ttf);
+}
 *{
     padding: 0;
     margin: 0;
@@ -26,11 +30,17 @@ body{
     background-color: beige;
 }
 main{
+    height: 100%;
+    width: 100%;
+    
+
     .head{
     font-family: head;
     @include flex-row;
     padding: 1rem;
     align-items: center;
+    width: 100%;
+    gap: 0.3rem;
 
         .navbar{
             border: 2px solid black;
@@ -58,16 +68,26 @@ main{
         .btn{
             @include shadow;
            padding: 0.6rem 1.7rem;
-           font-weight: 600;
-           font-family: head;
+           font-weight: 800;
+           font-family: pixel;
            background-color: rgb(255, 237, 75);
            border: 2px solid black;
-           transition: all 0.3s ease-in-out
+           transition: all 0.3s ease-in-out;
         }
         .btn:hover{
             transform: translateX(4px);
             box-shadow: none;
         }
+        
 
     }
+      section.hero{
+        background-color:black;
+        height: 85vh; 
+
+        .top{
+            width: 100%;
+            background-color: red;
+        }
+     }
 }
