@@ -1,3 +1,7 @@
+@font-face {
+  font-family: head;
+  src: url(./NeueMachina-Regular.otf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -11,4 +15,41 @@ html, body {
 
 body {
   background-color: beige;
+}
+
+main .head {
+  font-family: head;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+  align-items: center;
+}
+main .head .navbar {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+  font-size: 0.8rem;
+  align-items: center;
+}
+main .head .navbar a {
+  text-decoration: none;
+  color: black;
+  margin: 0.3rem 2rem;
+  font-weight: 600;
+}
+main .head .btn {
+  box-shadow: 3px 5px 0px black;
+  padding: 0.6rem 1.7rem;
+  font-weight: 600;
+  font-family: head;
+  background-color: rgb(255, 237, 75);
+  border: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+main .head .btn:hover {
+  transform: translateX(4px);
+  box-shadow: none;
 }/*# sourceMappingURL=style.css.map */

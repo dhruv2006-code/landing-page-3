@@ -1,5 +1,17 @@
 @mixin flex-row{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+@mixin shadow{
+    box-shadow: 3px 5px 0px black;
+}
+@mixin hover{
+    transform: translateX(3px);
+}
+@font-face {
+    font-family: head;
+    src: url(./NeueMachina-Regular.otf);
 }
 *{
     padding: 0;
@@ -13,6 +25,40 @@ html,body{
 body{
     background-color: beige;
 }
-.header{
+main{
+    .head{
+    font-family: head;
+    @include flex-row;
+    padding: 1rem;
+    align-items: center;
 
+        .navbar{
+            border: 2px solid black;
+        @include flex-row;
+        gap: 1rem;
+        font-size: 0.8rem;
+        align-items: center;
+        
+            a{
+            text-decoration: none;
+            color: black;
+            margin: 0.3rem 2rem;
+            font-weight: 600;
+            }
+        }
+        .btn{
+            @include shadow;
+           padding: 0.6rem 1.7rem;
+           font-weight: 600;
+           font-family: head;
+           background-color: rgb(255, 237, 75);
+           border: 2px solid black;
+           transition: all 0.3s ease-in-out
+        }
+        .btn:hover{
+            transform: translateX(4px);
+            box-shadow: none;
+        }
+
+    }
 }
