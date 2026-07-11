@@ -1,10 +1,14 @@
 @mixin flex-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 @mixin shadow{
     box-shadow: 3px 5px 0px black;
+}
+@mixin flex-column{
+     display: flex;
+    flex-direction: column;
 }
 @mixin hover{
     transform: translateX(3px);
@@ -21,6 +25,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+        font-family: head;
 }
 html,body{
     width: 100%;
@@ -82,12 +87,38 @@ main{
 
     }
       section.hero{
-        background-color:black;
-        height: 85vh; 
-
+        height: 90vh; 
+        color: rgb(2, 2, 2);
+        @include flex-column;
+        text-align: center;
+       justify-content: center;
+        font-size: 2rem;
+        gap: 1rem;
         .top{
             width: 100%;
-            background-color: red;
+            line-height: 1.5;
+            letter-spacing: 1.6px;
+            h5{
+                color: rgb(155, 110, 44);
+            }
+            h2{
+
+                span{
+                    background-color: rgba(109, 109, 109, 0.547);
+                    padding: 0.5rem 1rem;
+                }
+            }
+        }
+        .bottom{
+            font-size: 0.7rem;
+            opacity: 0.6;
+        }
+     }
+     section.intro{
+        width: 100%;
+
+        video{
+            width: 100%;
         }
      }
 }

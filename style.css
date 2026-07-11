@@ -10,6 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: head;
 }
 
 html, body {
@@ -71,10 +72,34 @@ main .head .btn:hover {
   box-shadow: none;
 }
 main section.hero {
-  background-color: black;
-  height: 85vh;
+  height: 90vh;
+  color: rgb(2, 2, 2);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+  gap: 1rem;
 }
 main section.hero .top {
   width: 100%;
-  background-color: red;
+  line-height: 1.5;
+  letter-spacing: 1.6px;
+}
+main section.hero .top h5 {
+  color: rgb(155, 110, 44);
+}
+main section.hero .top h2 span {
+  background-color: rgba(109, 109, 109, 0.547);
+  padding: 0.5rem 1rem;
+}
+main section.hero .bottom {
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+main section.intro {
+  width: 100%;
+}
+main section.intro video {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
