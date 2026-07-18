@@ -119,25 +119,49 @@ main{
 }
  section.intro{
         width: 100%;
-        height: 70vh;
+        height: 100vh;
         padding: 1rem;
-       animation-name: appear;
-    animation-duration: 1s;
+        background-color: black;
+        @include flex-row;
+        border-radius: 10%;
+        color: white;
+      
+    img{
+        width: 40%;
+        animation-name: appear;
+    animation-duration: 3s;
     animation-timeline: view();
     animation-range: entry 0% cover 100%;
     
-    img{
-        width: 50%;
     }
+    .txt{
+        @include flex-column;
+        place-content: center;
 
+        h2{
+            i{
+                background-color: yellow;
+                display: inline-block;
+                 color: black;
+                padding: 0.5rem;
+                border-radius: 50%;
+                transition:all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            i:hover{
+                rotate:45deg;
+                background-color: white;
+               
+            }
+        }
+    }
 
     }
       @keyframes appear{
         from{
-        transform: translateX(-100%) translateY(0) rotate(0deg) scale(0);
+        transform: translateX(-60%) translateY(0) rotate(180deg) scale(0.5);
         }
         to{
-           transform: translateX(10%) translateY(-10%) rotate(95deg) scale(0.7);
+           transform: translateX(3%) translateY(2%) rotate(0deg) scale(0.7);
      }
     }
 }
@@ -154,45 +178,97 @@ main{
                 background-color: #FF6B6B;
                 border: 1.5px solid black;
                 border-radius: 5%;
-                padding: 0.5rem 1rem;
+                padding: 1rem 2rem;
                 font-weight: 500;
                 font-family: pixel;
-
+                animation-name: extend;
+                animation-duration: 3s;
+                animation-timeline: view();
+                animation-range: entry 0% cover 100%;
+                width: fit-content;
+        }
+       
+        @keyframes extend{
+            from{
+                width: 0;
+                color: blanchedalmond;
+                background-color: blanchedalmond;
+                border: none;
+                transform: scale(0.8);
+                overflow: hidden;
+            }
+            to{
+                width: 100%;
+                color: black;
+                background-color: #FF6B6B;
+                transform: scale(1);
+            }
         }
     }
+     .line{
+            
+            h1{
+                font-size: 2.5rem;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+        }
     .bottom{
         width: 100%;
         padding: 1rem;
         @include flex-row;
-        background-color: black;
         .card{
-          @include flex-row();
+          @include flex-row;
         align-items: center;
         gap: 1rem;
-        width: 100%;
+        width: 95%;
         padding: 2rem;
         background: #FF6B6B;
         color: white;
-           .text{
-               flex: 1;
-               text-align: left;
-            img{
-            width: 40%;
+          img{
+            width: 35%;
             border-radius: 10%;
             object-fit: cover;
            }
+           .text{
+            font-size: 2rem;
+            width: 50%;
+            gap: 1rem;
+            padding: 1rem;
+               text-align: left;
+               @include flex-column;
+               background-color: #614545;
+          
            h3{
+            
             span{
                 color: rgb(255, 221, 0);
                 font-size: 3rem;
             }
            }
               p{
-                font-size: 0.5rem;
+                font-size: 1rem;
                 opacity: 0.5;
             }
            }
           
+        }
+        .icn{
+            
+        }
+    }
+}
+@media (max-width: 900px) {
+    main{
+
+        .head{
+
+            .navbar{
+                display: none;
+            }
+            section.intro{
+                @include flex-column;
+            }
         }
     }
 }
